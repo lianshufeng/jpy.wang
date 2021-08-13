@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/page::commonHeader"></head>
+
+<body class="body-container">
+<nav th:replace="common/page::commonNavbar"/>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="common/page::commonSidebar"></div>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+            <!-- 内容详情 -->
+            <div class="form-group row mx-0 brc-primary-l1 radius-b-1">
+               捡个便宜，交个朋友，值得有用!
+            </div>
+
+            <div class="form-group row mx-0">
+
+<textarea rows="10" class="form-control" id="id-textarea-autosize" readonly="readonly" style="overflow: hidden; overflow-wrap: break-word; resize: horizontal;">
+"喵~"  (^_^)````'!
+</textarea>
+
+
+            </div>
+
+
+        </div>
+
+        <footer th:replace="common/page::commonFooter1"/>
+    </div>
+
+</div>
+
+<div th:replace="common/page::commonIncludeScripts"/>
+
+
+<!--页面功能-->
+<script src="./page/index.js"></script>
+
+</body>
+</html>
+
+
+
+

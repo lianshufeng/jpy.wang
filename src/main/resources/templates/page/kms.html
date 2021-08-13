@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/page::commonHeader"></head>
+
+<body class="body-container">
+<nav th:replace="common/page::commonNavbar"/>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="common/page::commonSidebar"></div>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+
+            <iframe src="//kms.jpy.wang"
+                    border="0"   allowtransparency="yes"
+                    style="border:0px;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:85%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
+                 ></iframe>
+
+        </div>
+        <footer th:replace="common/page::commonFooter1"/>
+    </div>
+
+</div>
+
+<div th:replace="common/page::commonIncludeScripts"/>
+
+</body>
+
+
+</html>
+
+

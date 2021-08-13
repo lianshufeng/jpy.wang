@@ -1,0 +1,80 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<ul class="nav flex-column has-active-border active-on-top active-on-right">
+    <li class="nav-item active open">
+
+        <a href="#" class="nav-link dropdown-toggle">
+            <i class="nav-icon fa fa-cube"></i>
+            <span class="nav-text fadeable">
+               	  <span>功能</span>
+                    </span>
+            <b class="caret fa fa-angle-left rt-n90"></b>
+        </a>
+
+        <div class="hideable submenu collapse show">
+            <ul class="submenu-inner">
+                <li class="nav-item active" th:class="${viewName} =='index' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/index.html" th:href="@{/page/index.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>welcome</span>
+                          </span>
+                    </a>
+                </li>
+                <li class="nav-item" th:class="${viewName} =='kms' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/kms.html" th:href="@{/page/kms.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>kms</span>
+                          </span>
+                    </a>
+                </li>
+
+                <li class="nav-item" th:class="${viewName} =='jrebel' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/jrebel.html" th:href="@{/page/jrebel.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>jrebel</span>
+                          </span>
+                    </a>
+                </li>
+
+                <li class="nav-item" th:class="${viewName} =='jetbrains' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/jetbrains.html" th:href="@{/page/jetbrains.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>jetbrains</span>
+                          </span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item" th:class="${viewName} =='navicat' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/navicat.html" th:href="@{/page/navicat.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>navicat</span>
+                          </span>
+                    </a>
+                </li>
+
+                <li class="nav-item" th:class="${viewName} =='studio3t' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/studio3t.html" th:href="@{/page/studio3t.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>studio3t</span>
+                          </span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item" th:class="${viewName} =='proxycap' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/proxycap.html" th:href="@{/page/proxycap.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>proxycap</span>
+                          </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <b class="sub-arrow"></b>
+
+    </li>
+</ul>
+</html>
+
