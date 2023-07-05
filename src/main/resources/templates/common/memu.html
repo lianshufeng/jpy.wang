@@ -69,6 +69,15 @@
                     </a>
                 </li>
 
+
+                <li class="nav-item" th:class="${viewName} =='openai' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/openai.html" th:href="@{/page/openai.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>openai</span>
+                          </span>
+                    </a>
+                </li>
+
             </ul>
         </div>
 

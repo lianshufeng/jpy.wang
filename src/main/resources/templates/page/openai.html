@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/page::commonHeader"></head>
+
+<body class="body-container">
+<nav th:replace="common/page::commonNavbar"/>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="common/page::commonSidebar"></div>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+            <!-- 内容详情 -->
+            <p>
+                :: 请拷贝到命令提示符中执行 (批处理 bat) , jdk11 +
+            </p>
+            <p>
+            <span>
+                curl https://register.jpy.wang/ReRegister/src/main/java/openai/OpenAiMain.java -o tmp.java && java tmp.java && del tmp.java
+            </span>
+            </p>
+        </div>
+        <footer th:replace="common/page::commonFooter1"/>
+    </div>
+
+</div>
+
+<div th:replace="common/page::commonIncludeScripts"/>
+
+</body>
+
+
+</html>
+
+
