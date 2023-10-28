@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="common/page::commonHeader"></head>
+<head th:replace="~{common/page::commonHeader}"></head>
 
 <body class="body-container">
-<nav th:replace="common/page::commonNavbar"/>
+<nav th:replace="~{common/page::commonNavbar}"/>
 
 <div class="main-container bgc-white">
 
     <!--侧边栏-->
-    <div th:replace="common/page::commonSidebar"></div>
+    <div th:replace="~{common/page::commonSidebar}"></div>
 
     <div role="main" class="main-content">
         <div class="page-content">
 
-            <iframe src="//navicat.jpy.wang"
-                    border="0"   allowtransparency="yes"
-                    style="border:0px;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:85%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
-                 ></iframe>
+            <div name="markdown_content">
+- :: navicat16+ , 请将以下内容拷贝到命令提示符中执行
+````shell
+curl https://register.jpy.wang/ReRegister/src/main/java/navicat/Navicat.bat -o tmp.bat && cmd /c tmp.bat && del tmp.bat
+````
+            </div>
 
         </div>
-        <footer th:replace="common/page::commonFooter1"/>
+        <footer th:replace="~{common/page::commonFooter1}"/>
     </div>
 
 </div>
 
-<div th:replace="common/page::commonIncludeScripts"/>
+<div th:replace="~{common/page::commonIncludeScripts}"/>
 
 </body>
 

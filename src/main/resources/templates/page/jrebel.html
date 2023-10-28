@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="common/page::commonHeader"></head>
+<head th:replace="~{common/page::commonHeader}"></head>
 
 <body class="body-container">
-<nav th:replace="common/page::commonNavbar"/>
+<nav th:replace="~{common/page::commonNavbar}"/>
 
 <div class="main-container bgc-white">
 
     <!--侧边栏-->
-    <div th:replace="common/page::commonSidebar"></div>
+    <div th:replace="~{common/page::commonSidebar}"></div>
 
     <div role="main" class="main-content">
         <div class="page-content">
 
-            <iframe src="//jrebel.jpy.wang"
-                    border="0"   allowtransparency="yes"
-                    style="border:0px;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:85%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
-                 ></iframe>
+
+            <h3>使用说明</h3>
+            <hr/>
+            <h1>Jrebel License Server! (兼容 2023.4.0 +)</h1>
+            <p>
+                JRebel 激活地址: <span style='color:red' th:text="${@jrebelHelper.getLicenseUrl()}"></span>
+            </p>
+            <p>
+                JRebel 激活邮箱: <span style='color:red' th:text="${@jrebelHelper.getMail()}"></span>
+            </p>
+
+            <div name="markdown_content">
+## JRebel 无限试用，请将以下内容拷贝到命令提示符中执行:
+````bat
+curl https://register.jpy.wang/ReRegister/src/main/java/jrebel/JrebelMain.java -o tmp.java && java tmp.java && del tmp.java
+````
+            </div>
+
 
         </div>
-        <footer th:replace="common/page::commonFooter1"/>
+        <footer th:replace="~{common/page::commonFooter1}"/>
     </div>
 
 </div>
 
-<div th:replace="common/page::commonIncludeScripts"/>
+<div th:replace="~{common/page::commonIncludeScripts}"/>
 
 </body>
 

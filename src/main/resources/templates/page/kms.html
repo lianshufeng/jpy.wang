@@ -1,31 +1,730 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="common/page::commonHeader"></head>
+<head th:replace="~{common/page::commonHeader}"></head>
 
 <body class="body-container">
-<nav th:replace="common/page::commonNavbar"/>
+<nav th:replace="~{common/page::commonNavbar}"/>
 
 <div class="main-container bgc-white">
 
     <!--侧边栏-->
-    <div th:replace="common/page::commonSidebar"></div>
+    <div th:replace="~{common/page::commonSidebar}"></div>
 
     <div role="main" class="main-content">
         <div class="page-content">
 
-            <iframe src="//kms.jpy.wang"
-                    border="0"   allowtransparency="yes"
-                    style="border:0px;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:85%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
-                 ></iframe>
+
+            <div name="markdown_content">
+## Windows(家庭版) 激活:
+````bat
+:: 请将以下内容拷贝到命令提示符中执行
+slmgr /upk
+slmgr /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
+slmgr /skms kms.jpy.wang
+slmgr /ato
+````
+            </div>
+
+
+            <div name="markdown_content">
+## Windows(专业版) 激活:
+````bat
+:: 请将以下内容拷贝到命令提示符中执行
+slmgr /upk
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+slmgr /skms kms.jpy.wang
+slmgr /ato
+````
+            </div>
+
+
+        <div name="markdown_content">
+## Office2021 激活:
+````bat
+:: 请将以下内容拷贝到命令提示符中执行
+cd /d %programfiles%\Microsoft Office\Office16
+cscript ospp.vbs /sethst:kms.jpy.wang
+cscript ospp.vbs /act
+````
+        </div>
+
+            <p>
+                <a href="//kms.jpy.wang/Office2021-kms.jpy.wang.zip">Office2021下载并安装</a>
+            </p>
+
+
+            <main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+                <h3 id="windows-server-2022" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-server-2022" aria-labelledby="windows-server-2022"></a>Windows Server 2022
+                </h3>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows Server 2022</caption>
+                        <thead>
+                        <tr>
+                            <th>Operating system edition</th>
+                            <th>KMS Client Setup Key</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Windows Server 2022 Datacenter</td>
+                            <td>WX4NM-KYWYW-QJJR4-XV3QB-6VM33</td>
+                        </tr>
+                        <tr>
+                            <td>Windows Server 2022 Standard</td>
+                            <td>VDYBN-27WPP-V4HQT-9VMD4-VMK7H</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 id="windows-server-2019" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-server-2019" aria-labelledby="windows-server-2019"></a>Windows Server 2019
+                </h3>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows Server 2019</caption>
+                        <thead>
+                        <tr>
+                            <th>Operating system edition</th>
+                            <th>KMS Client Setup Key</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Windows Server 2019 Datacenter</td>
+                            <td>WMDGN-G9PQG-XVVXX-R3X43-63DFG</td>
+                        </tr>
+                        <tr>
+                            <td>Windows Server 2019 Standard</td>
+                            <td>N69G4-B89J2-4G8F4-WWYCC-J464C</td>
+                        </tr>
+                        <tr>
+                            <td>Windows Server 2019 Essentials</td>
+                            <td>WVDHN-86M7X-466P6-VHXV7-YY726</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <h2 id="windows-server-2016" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-server-2016" aria-labelledby="windows-server-2016"></a>Windows Server 2016
+                </h2>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows Server 2016</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr class="header">
+                            <th>
+                                <p>Operating system edition</p>
+                            </th>
+                            <th>
+                                <p>KMS Client Setup Key</p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2016 Datacenter</p>
+                            </td>
+                            <td>
+                                <p>CB7KF-BWN84-R7R2Y-793K2-8XDDG</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2016 Standard</p>
+                            </td>
+                            <td>
+                                <p>WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2016 Essentials</p>
+                            </td>
+                            <td>
+                                <p>JCKRF-N37P4-C2D82-9YXRT-4M63B</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="windows-10" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-10" aria-labelledby="windows-10"></a>Windows 10
+                </h2>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows 10</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr class="header">
+                            <th>
+                                <p>Operating system edition</p>
+                            </th>
+                            <th>
+                                <p>KMS Client Setup Key</p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 10 Professional</p>
+                            </td>
+                            <td>
+                                <p>W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 10 Professional N</p>
+                            </td>
+                            <td>
+                                <p>MH37W-N47XK-V7XM9-C7227-GCQG9</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 10 Enterprise</p>
+                            </td>
+                            <td>
+                                <p>NPPR9-FWDCX-D2C8J-H872K-2YT43</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 10 Enterprise N</p>
+                            </td>
+                            <td>
+                                <p>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 10 Education</p>
+                            </td>
+                            <td>
+                                <p>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 10 Education N</p>
+                            </td>
+                            <td>
+                                <p>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 10 Enterprise 2015 LTSB</p>
+                            </td>
+                            <td>
+                                <p>WNMTR-4C88C-JK8YV-HQ7T2-76DF9</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 10 Enterprise 2015 LTSB N</p>
+                            </td>
+                            <td>
+                                <p>2F77B-TNFGY-69QQF-B8YKP-D69TJ</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 10 Enterprise 2016 LTSB</p>
+                            </td>
+                            <td>
+                                <p>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 10 Enterprise 2016 LTSB N</p>
+                            </td>
+                            <td>
+                                <p>QFFDN-GRT3P-VKWWX-X7T3R-8B639</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="windows-server-2012-r2-and-windows-81" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-server-2012-r2-and-windows-81" aria-labelledby="windows-server-2012-r2-and-windows-81"></a>Windows Server 2012 R2 and Windows 8.1
+                </h2>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows Server 2012 R2 and Windows 8.1</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr class="header">
+                            <th>
+                                <p>Operating system edition</p>
+                            </th>
+                            <th>
+                                <p>KMS Client Setup Key</p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 8.1 Professional</p>
+                            </td>
+                            <td>
+                                <p>GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 8.1 Professional N</p>
+                            </td>
+                            <td>
+                                <p>HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 8.1 Enterprise</p>
+                            </td>
+                            <td>
+                                <p>MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 8.1 Enterprise N</p>
+                            </td>
+                            <td>
+                                <p>TT4HM-HN7YT-62K67-RGRQJ-JFFXW</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2012 R2 Server Standard</p>
+                            </td>
+                            <td>
+                                <p>D2N9P-3P6X9-2R39C-7RTCD-MDVJX</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2012 R2 Datacenter</p>
+                            </td>
+                            <td>
+                                <p>W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2012 R2 Essentials</p>
+                            </td>
+                            <td>
+                                <p>KNC87-3J2TX-XB4WP-VCPJV-M4FWM</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="windows-server-2012-and-windows-8" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-server-2012-and-windows-8" aria-labelledby="windows-server-2012-and-windows-8"></a>Windows Server 2012 and Windows 8
+                </h2>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows Server 2012 and Windows 8</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr class="header">
+                            <th>
+                                <p>Operating system edition</p>
+                            </th>
+                            <th>
+                                <p>KMS Client Setup Key</p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 8 Professional</p>
+                            </td>
+                            <td>
+                                <p>NG4HW-VH26C-733KW-K6F98-J8CK4</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 8 Professional N</p>
+                            </td>
+                            <td>
+                                <p>XCVCF-2NXM9-723PB-MHCB7-2RYQQ</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 8 Enterprise</p>
+                            </td>
+                            <td>
+                                <p>32JNW-9KQ84-P47T8-D8GGY-CWCK7</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 8 Enterprise N</p>
+                            </td>
+                            <td>
+                                <p>JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2012</p>
+                            </td>
+                            <td>
+                                <p>BN3D2-R7TKB-3YPBD-8DRP2-27GG4</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2012 N</p>
+                            </td>
+                            <td>
+                                <p>8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2012 Single Language</p>
+                            </td>
+                            <td>
+                                <p>2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2012 Country Specific</p>
+                            </td>
+                            <td>
+                                <p>4K36P-JN4VD-GDC6V-KDT89-DYFKP</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2012 Server Standard</p>
+                            </td>
+                            <td>
+                                <p>XC9B7-NBPP2-83J2H-RHMBY-92BT4</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2012 MultiPoint Standard</p>
+                            </td>
+                            <td>
+                                <p>HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2012 MultiPoint Premium</p>
+                            </td>
+                            <td>
+                                <p>XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2012 Datacenter</p>
+                            </td>
+                            <td>
+                                <p>48HP8-DN98B-MYWDG-T2DCC-8W83P</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="windows-7-and-windows-server-2008-r2" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-7-and-windows-server-2008-r2" aria-labelledby="windows-7-and-windows-server-2008-r2"></a>Windows 7 and Windows Server 2008 R2
+                </h2>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows 7 and Windows Server 2008 R2</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr class="header">
+                            <th>
+                                <p>Operating system edition</p>
+                            </th>
+                            <th>
+                                <p>KMS Client Setup Key</p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 7 Professional</p>
+                            </td>
+                            <td>
+                                <p>FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 7 Professional N</p>
+                            </td>
+                            <td>
+                                <p>MRPKT-YTG23-K7D7T-X2JMM-QY7MG</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 7 Professional E</p>
+                            </td>
+                            <td>
+                                <p>W82YF-2Q76Y-63HXB-FGJG9-GF7QX</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 7 Enterprise</p>
+                            </td>
+                            <td>
+                                <p>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows 7 Enterprise N</p>
+                            </td>
+                            <td>
+                                <p>YDRBP-3D83W-TY26F-D46B2-XCKRJ</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows 7 Enterprise E</p>
+                            </td>
+                            <td>
+                                <p>C29WB-22CC8-VJ326-GHFJW-H9DH4</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 R2 Web</p>
+                            </td>
+                            <td>
+                                <p>6TPJF-RBVHG-WBW2R-86QPH-6RTM4</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 R2 HPC edition</p>
+                            </td>
+                            <td>
+                                <p>TT8MH-CG224-D3D7Q-498W2-9QCTX</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 R2 Standard</p>
+                            </td>
+                            <td>
+                                <p>YC6KT-GKW9T-YTKYR-T4X34-R7VHC</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 R2 Enterprise</p>
+                            </td>
+                            <td>
+                                <p>489J6-VHDMP-X63PK-3K798-CPX3Y</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 R2 Datacenter</p>
+                            </td>
+                            <td>
+                                <p>74YFP-3QFB3-KQT8W-PMXWJ-7M648</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 R2 for Itanium-based Systems</p>
+                            </td>
+                            <td>
+                                <p>GT63C-RJFQ3-4GMB6-BRFB9-CB83V</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="windows-vista-and-windows-server-2008" class="heading-anchor">
+                    <a class="anchor-link docon docon-link" href="#windows-vista-and-windows-server-2008" aria-labelledby="windows-vista-and-windows-server-2008"></a>Windows Vista and Windows Server 2008
+                </h2>
+                <div class="table-scroll-wrapper">
+                    <table class="table">
+                        <caption class="visually-hidden">Windows Vista and Windows Server 2008</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr class="header">
+                            <th>
+                                <p>Operating system edition</p>
+                            </th>
+                            <th>
+                                <p>KMS Client Setup Key</p>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Vista Business</p>
+                            </td>
+                            <td>
+                                <p>YFKBB-PQJJV-G996G-VWGXY-2V3X8</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Vista Business N</p>
+                            </td>
+                            <td>
+                                <p>HMBQG-8H2RH-C77VX-27R82-VMQBT</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Vista Enterprise</p>
+                            </td>
+                            <td>
+                                <p>VKK3X-68KWM-X2YGT-QR4M6-4BWMV</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Vista Enterprise N</p>
+                            </td>
+                            <td>
+                                <p>VTC42-BM838-43QHV-84HX6-XJXKV</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Web Server 2008</p>
+                            </td>
+                            <td>
+                                <p>WYR28-R7TFJ-3X2YQ-YCY4H-M249D</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 Standard</p>
+                            </td>
+                            <td>
+                                <p>TM24T-X9RMF-VWXK6-X8JC9-BFGM2</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 Standard without Hyper-V</p>
+                            </td>
+                            <td>
+                                <p>W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 Enterprise</p>
+                            </td>
+                            <td>
+                                <p>YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 Enterprise without Hyper-V</p>
+                            </td>
+                            <td>
+                                <p>39BXF-X8Q23-P2WWT-38T2F-G3FPG</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 HPC</p>
+                            </td>
+                            <td>
+                                <p>RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 Datacenter</p>
+                            </td>
+                            <td>
+                                <p>7M67G-PC374-GR742-YH8V4-TCBY3</p>
+                            </td>
+                        </tr>
+                        <tr class="even">
+                            <td>
+                                <p>Windows Server 2008 Datacenter without Hyper-V</p>
+                            </td>
+                            <td>
+                                <p>22XQ2-VRXRG-P8D42-K34TD-G3QQC</p>
+                            </td>
+                        </tr>
+                        <tr class="odd">
+                            <td>
+                                <p>Windows Server 2008 for Itanium-Based Systems</p>
+                            </td>
+                            <td>
+                                <p>4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+
 
         </div>
-        <footer th:replace="common/page::commonFooter1"/>
+        <footer th:replace="~{common/page::commonFooter1}"/>
     </div>
 
 </div>
 
-<div th:replace="common/page::commonIncludeScripts"/>
+<div th:replace="~{common/page::commonIncludeScripts}"/>
 
 </body>
 
