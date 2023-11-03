@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{common/page::commonHeader}"></head>
+
+<body class="body-container">
+<nav th:replace="~{common/page::commonNavbar}"/>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="~{common/page::commonSidebar}"></div>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+
+    <p>请将以下内容拷贝到命令提示符中执行 (jdk8+)</p>
+    <p>
+        <span>
+            curl https://register.jpy.wang/ReRegister/src/main/java/burploader/BurpProLoader-v2.0-SNAPSHOT.jar -o BurpProLoader-v2.0-SNAPSHOT.jar && java -jar BurpProLoader-v2.0-SNAPSHOT.jar && del BurpProLoader-v2.0-SNAPSHOT.jar
+        </span>
+    </p>
+            <img src="./images/burploader.png" />
+    <p>
+        <span>特性:</span>
+        <p>1.最低jdk8可运行</p>
+        <p>2.一键下载jdk17</p>
+        <p>3.一键下载最新的Burp.jar</p>
+        <p>4.兼容 windows 与 linux</p>
+    </p>
+
+
+        </div>
+        <footer th:replace="~{common/page::commonFooter1}"/>
+    </div>
+
+</div>
+
+<div th:replace="~{common/page::commonIncludeScripts}"/>
+
+</body>
+
+
+</html>
+
+
