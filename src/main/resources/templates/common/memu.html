@@ -70,6 +70,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item" th:class="${viewName} =='docker-pull' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/docker-pull.html" th:href="@{/page/docker-pull.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>docker-pull 加速器</span>
+                          </span>
+                    </a>
+                </li>
 
                 <li class="nav-item" th:class="${viewName} =='proxycap' ? 'nav-item active' : 'nav-item'">
                     <a href="../page/proxycap.html" th:href="@{/page/proxycap.html}" class="nav-link">

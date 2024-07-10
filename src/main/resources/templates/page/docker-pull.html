@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{common/page::commonHeader}"></head>
+
+<body class="body-container">
+<nav th:replace="~{common/page::commonNavbar}"/>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="~{common/page::commonSidebar}"></div>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+
+            <div name="markdown_content">
+### 特性
+
+- **支持线程**
+- **支持断点续传**
+- **支持缓存**
+- **支持代理**
+- **支持镜像**
+- **兼容v1和v2协议** - https://docs.docker.com/registry/
+
+### 基础
+```bash
+docker-pull [-config] [imageName]
+
+### 例子
+- 基本
+```bash
+docker-pull nginx
+docker-pull mysql/mysql-server:8.0
+docker-pull nginx@sha256:d987469c32fecb3f839a4606671eb2bb308039a3a6b2d086341769da3931b9b6
+```
+- 代理
+```bash
+docker-pull -proxy http://127.0.0.1:1080 nginx
+```
+- 镜像
+```bash
+docker-pull -m docker.chatsbot.org nginx
+```
+
+#### Docker 容器里运行
+
+- x86
+```bash
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ${PWD}:/work lianshufeng/docker-pull -m docker.chatsbot.org nginx
+```
+
+- nas/arm
+```bash
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v ${PWD}:/work lianshufeng/docker-pull:arm -m docker.chatsbot.org -architecture arm nginx
+```
+</div>
+
+
+        </div>
+        <footer th:replace="~{common/page::commonFooter1}"/>
+    </div>
+
+</div>
+
+<div th:replace="~{common/page::commonIncludeScripts}"/>
+
+</body>
+
+
+</html>
+
+
