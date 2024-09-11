@@ -1,5 +1,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <ul class="nav flex-column has-active-border active-on-top active-on-right">
+
     <li class="nav-item active open">
 
         <a href="#" class="nav-link dropdown-toggle">
@@ -95,6 +96,13 @@
                 </li>
 
 
+                <li class="nav-item" th:class="${viewName} =='consul' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/consul.html" th:href="@{/page/consul.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>consul</span>
+                          </span>
+                    </a>
+                </li>
 
             </ul>
         </div>
@@ -102,6 +110,11 @@
         <b class="sub-arrow"></b>
 
     </li>
+
+
+
+
+
 </ul>
 </html>
 
