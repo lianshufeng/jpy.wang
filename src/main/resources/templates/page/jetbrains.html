@@ -19,15 +19,18 @@
 
             <div name="markdown_content">
 
-- :: 注册 jetbrains 账户插件 ( 2023 + ), 请将以下内容拷贝到命令提示符中执行
-````shell
-curl https://register.jpy.wang/ReRegister/src/main/java/jetbrains/JetBrainsMain2.java -o tmp.java && java tmp.java && del tmp.java
-````
 
 - :: (推荐) 注册 jetbrains (idea webstorm 等全家桶)  账户插件 ( 2024 + ), 请将以下内容拷贝到命令提示符中执行
 ````shell
 curl https://register.jpy.wang/ReRegister/src/main/java/jetbrains/JetBrainsRegister.bat | cmd
 ````
+
+- :: 基于 JetBrains 2024.3.x 以上版本需要使用此代理才能激活试用
+````shell
+curl -o jetbrains_proxy.bat https://register.jpy.wang/ReRegister/src/main/java/jetbrains/jetbrains_proxy.bat && cmd /c jetbrains_proxy.bat
+````
+
+
             </div>
 
 
