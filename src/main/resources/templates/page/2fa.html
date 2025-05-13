@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{common/page::commonHeader}"></head>
+
+<body class="body-container">
+<nav th:replace="~{common/page::commonNavbar}"></nav>
+
+<div class="main-container bgc-white">
+
+    <!--侧边栏-->
+    <div th:replace="~{common/page::commonSidebar}"></div>
+
+    <style>
+        input { margin: 5px; padding: 5px; }
+        button { margin: 5px; padding: 5px 10px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        tr:hover { background-color: #f9f9f9; }
+        .section-block { background: #fafafa; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        /* 简单弹窗样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+
+    <div role="main" class="main-content">
+        <div class="page-content">
+
+            <!-- 已保存账户区域 -->
+            <div class="section-block">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>双因子验证账户</h3>
+                    <button onclick="openModal()">添加账户</button>
+                </div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>账户名称</th>
+                        <th>当前 TOTP</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="accountsList"></tbody>
+                </table>
+            </div>
+
+        </div>
+        <footer th:replace="~{common/page::commonFooter1}"></footer>
+    </div>
+
+</div>
+
+<!-- 弹窗 -->
+<div id="addAccountModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4>添加新账户</h4>
+        </div>
+        <input type="text" id="account" placeholder="账户名称（如 Google）" style="width: 100%;">
+        <input type="text" id="newSecret" placeholder="2FA 密钥（Base32）" style="width: 100%;">
+        <div style="text-align: right;">
+            <button onclick="addAccount()">添加</button>
+            <button onclick="closeModal()">取消</button>
+        </div>
+    </div>
+</div>
+
+<div th:replace="~{common/page::commonIncludeScripts}"></div>
+
+<script src="https://proxy.jpy.wang/unpkg.com/@otplib/preset-browser@12.0.1/buffer.js"></script>
+<script src="https://proxy.jpy.wang/unpkg.com/@otplib/preset-browser@12.0.1/index.js"></script>
+<script>
+    const STORAGE_KEY = 'totpAccounts';
+
+    function loadAccounts() {
+        const accounts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+        const tbody = document.getElementById('accountsList');
+        tbody.innerHTML = '';
+
+        for (const name in accounts) {
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            nameCell.textContent = name;
+
+            const otpCell = document.createElement('td');
+            otpCell.id = `otp-${name}`;
+            otpCell.textContent = getTOTP(accounts[name]);
+
+            const actionCell = document.createElement('td');
+            const refreshBtn = document.createElement('button');
+            refreshBtn.textContent = '刷新';
+            refreshBtn.onclick = () => {
+                otpCell.textContent = getTOTP(accounts[name]);
+            };
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = '删除';
+            deleteBtn.onclick = () => {
+                if (confirm(`确定删除账户 "${name}" 吗？`)) {
+                    delete accounts[name];
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(accounts));
+                    loadAccounts();
+                }
+            };
+
+            actionCell.appendChild(refreshBtn);
+            actionCell.appendChild(deleteBtn);
+
+            row.appendChild(nameCell);
+            row.appendChild(otpCell);
+            row.appendChild(actionCell);
+
+            tbody.appendChild(row);
+        }
+    }
+
+    function getTOTP(secret) {
+        try {
+            return window.otplib.authenticator.generate(secret);
+        } catch (e) {
+            return `错误：${e.message}`;
+        }
+    }
+
+    function addAccount() {
+        const name = document.getElementById('account').value.trim();
+        const secret = document.getElementById('newSecret').value.trim();
+        if (!name || !secret) {
+            alert('请填写账户名称和密钥');
+            return;
+        }
+        const accounts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+        accounts[name] = secret;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(accounts));
+        document.getElementById('account').value = '';
+        document.getElementById('newSecret').value = '';
+        closeModal();
+        loadAccounts();
+    }
+
+    function openModal() {
+        document.getElementById('addAccountModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('addAccountModal').style.display = 'none';
+    }
+
+    // 初始化
+    loadAccounts();
+</script>
+
+</body>
+</html>

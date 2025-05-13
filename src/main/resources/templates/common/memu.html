@@ -22,13 +22,30 @@
                 </li>
 
                 <li class="nav-item" th:class="${viewName} =='chatsbot' ? 'nav-item active' : 'nav-item'">
-                    <a href="http://chatsbot.org/" class="nav-link" target="_blank" >
+                    <a href="//chatsbot.org/" class="nav-link" target="_blank" >
                           <span class="nav-text">
                				  <span>GPT聊天</span>
                           </span>
                     </a>
                 </li>
 
+
+                <li class="nav-item" th:class="${viewName} =='chatsbot' ? 'nav-item active' : 'nav-item'">
+                    <a href="//github.jpy.wang/explore" class="nav-link" target="_blank" >
+                          <span class="nav-text">
+               				  <span>GitHub加速器</span>
+                          </span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item" th:class="${viewName} =='2fa' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/kms.html" th:href="@{/page/2fa.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>双因子验证(2FA)</span>
+                          </span>
+                    </a>
+                </li>
 
                 <li class="nav-item" th:class="${viewName} =='kms' ? 'nav-item active' : 'nav-item'">
                     <a href="../page/kms.html" th:href="@{/page/kms.html}" class="nav-link">
@@ -96,13 +113,6 @@
                 </li>
 
 
-                <li class="nav-item" th:class="${viewName} =='consul' ? 'nav-item active' : 'nav-item'">
-                    <a href="../page/consul.html" th:href="@{/page/consul.html}" class="nav-link">
-                          <span class="nav-text">
-               				  <span>consul</span>
-                          </span>
-                    </a>
-                </li>
 
             </ul>
         </div>
