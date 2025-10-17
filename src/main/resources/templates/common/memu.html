@@ -104,6 +104,16 @@
                     </a>
                 </li>
 
+
+                <li class="nav-item" th:class="${viewName} =='netdetour' ? 'nav-item active' : 'nav-item'">
+                    <a href="../page/netdetour.html" th:href="@{/page/netdetour.html}" class="nav-link">
+                          <span class="nav-text">
+               				  <span>netdetour</span>
+                          </span>
+                    </a>
+                </li>
+
+
                 <li class="nav-item" th:class="${viewName} =='burploader' ? 'nav-item active' : 'nav-item'">
                     <a href="../page/burploader.html" th:href="@{/page/burploader.html}" class="nav-link">
                           <span class="nav-text">
